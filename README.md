@@ -1,2 +1,7 @@
 # ThesisProject
 Improving Parameter Recovery for a Bayesian Model of Verticality Perception
+Contains 4 .py files:
+- integration_model.py: refined Bayesian integration model by Alberts et al. 2016
+- neural_network.py: Contains the code to train and save networks.
+- generate_data.py: Contains code to generate training data for network training as well as for adaptive stimulus selection.
+- adaptive_stimulus_selection.py: Contains code to simulate the experiment with adaptive stimulus selection.
