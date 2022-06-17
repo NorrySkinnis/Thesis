@@ -1,5 +1,5 @@
 # ThesisProject
-Improving Parameter Recovery for a Bayesian Model of Verticality Perception \
+Improving Parameter Recovery for a Bayesian Model of Verticality Perception 
 
 Contains 4 .py files and 1 .ipynb file:
 - integration_model.py: Contains the code to generate data from the refined Bayesian integration model by Alberts et al. 2016
