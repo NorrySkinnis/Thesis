@@ -17,6 +17,7 @@ For all n_trials of that run:
 import torch
 import numpy as np
 import integration_model as model
+from timeit import default_timer as timer
 from tqdm import tqdm
 from neural_network import get_model
 
@@ -145,11 +146,18 @@ if __name__ == '__main__':
     network_inputs = np.load(f'data/adaptive_stimulus_selection/disc_{disc}_net_input.npz')['arr_0']
     param_values = np.load(f'data/adaptive_stimulus_selection/disc_{disc}_params.npz')['arr_0']
 
-    print(param_values)
-
+    times = []
+    
     for n_r in range(1,11):
 
+        start = timer()
         stimulus_selection(500, network, network_inputs, param_values, n_r)
+        end = timer()
+        times.append(end-start)
+        
+    print(sum(times)/(500*10))
+        
+    
 
 
 
