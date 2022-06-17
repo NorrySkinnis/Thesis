@@ -132,18 +132,18 @@ def stimulus_selection(n_trials, network, inputs, param_values, n_r):
         map_estimated_params[t:] = param_values[np.argmax(priors)]
         priors_t[t:] = priors
 
-    np.savez_compressed(f'data/adaptive_stimulus_selection/output/disc_{disc}_avg_estimates_run_{n_r}.npz', avg_estimated_params)
-    np.savez_compressed(f'data/adaptive_stimulus_selection/output/disc_{disc}_map_estimates_run_{n_r}.npz', map_estimated_params)
-    np.savez_compressed(f'data/adaptive_stimulus_selection/output/disc_{disc}_frames_run_{n_r}.npz', theta_f_t)
-    np.savez_compressed(f'data/adaptive_stimulus_selection/output/disc_{disc}_rods_run_{n_r}.npz', theta_r_t)
-    np.savez_compressed(f'data/adaptive_stimulus_selection/output/disc_{disc}_priors_run_{n_r}.npz', priors_t)
+    np.savez_compressed(f'data/adaptive_stimulus_selection/disc_{disc}_avg_estimates_run_{n_r}.npz', avg_estimated_params)
+    np.savez_compressed(f'data/adaptive_stimulus_selection/disc_{disc}_map_estimates_run_{n_r}.npz', map_estimated_params)
+    np.savez_compressed(f'data/adaptive_stimulus_selection/disc_{disc}_frames_run_{n_r}.npz', theta_f_t)
+    np.savez_compressed(f'data/adaptive_stimulus_selection/disc_{disc}_rods_run_{n_r}.npz', theta_r_t)
+    np.savez_compressed(f'data/adaptive_stimulus_selection/disc_{disc}_priors_run_{n_r}.npz', priors_t)
 
 if __name__ == '__main__':
 
     network, _, _ = get_model()
-    network.load_state_dict(torch.load('models/relu_100_100_models/relu_100_100_batch_size_250_fold_1.pt', map_location=torch.device('cpu')))
-    network_inputs = np.load(f'data/adaptive_stimulus_selection/input/disc_{disc}_net_input.npz')['arr_0']
-    param_values = np.load(f'data/adaptive_stimulus_selection/input/disc_{disc}_params.npz')['arr_0']
+    network.load_state_dict(torch.load('models/relu_100_100/relu_100_100_batch_size_250_fold_1.pt', map_location=torch.device('cpu')))
+    network_inputs = np.load(f'data/adaptive_stimulus_selection/disc_{disc}_net_input.npz')['arr_0']
+    param_values = np.load(f'data/adaptive_stimulus_selection/disc_{disc}_params.npz')['arr_0']
 
     print(param_values)
 
