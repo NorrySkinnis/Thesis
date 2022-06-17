@@ -1,4 +1,4 @@
-# ThesisProject
+# Thesis Project
 Improving Parameter Recovery for a Bayesian Model of Verticality Perception 
 
 Contains 4 .py files and 1 .ipynb file and 2 directories:
