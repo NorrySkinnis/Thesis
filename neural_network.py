@@ -135,8 +135,8 @@ def plot_network_behaviour(train_losses, val_losses, epochs, batch_size, fold):
 
 if __name__ == '__main__':
 
-    X = np.load(f'data/training/inputs/in_5_20_20.npz')['arr_0']
-    y = np.load(f'data/training/targets/ts_5_20_20.npz')['arr_0']
+    X = np.load(f'data/training/in_5_20_20.npz')['arr_0']
+    y = np.load(f'data/training/ts_5_20_20.npz')['arr_0']
 
     epochs = 100
     batch_size = 125
