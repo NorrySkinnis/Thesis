@@ -10,7 +10,7 @@ For all n_trials of that run:
 - map estimates
 - frames which were selected
 - rods which were selected
-- priors at t
+- priors 
 
 '''
 
